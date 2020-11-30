@@ -16,6 +16,7 @@ jobs:
         with:
           node-version: 12
       - run: npx lerna bootstrap
+      - run: npm ci
       - run: npx lerna run build
 
   publish-npm:
