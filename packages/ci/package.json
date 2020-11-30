@@ -11,7 +11,7 @@
     "test": "test",
     "dev": "rollup --config=rollup.config.ts --watch",
     "build": "rollup --config=rollup.config.ts",
-    "release": "npm run publish"
+    "release": "npm publish"
   },
   "author": "alexlees",
   "license": "MIT",
