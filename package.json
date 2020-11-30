@@ -1,0 +1,52 @@
+{
+  "name": "root",
+  "version": "0.0.0",
+  "description": "one ci for one.",
+  "private": true,
+  "scripts": {
+    "publish": "lerna version --conventional-commits --create-release github",
+    "commit": "lint-staged && export HUSKY_SKIP_HOOKS=1 && git-cz"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "*.{js,jsx,less,md,json,ts,tsx}": [
+      "prettier --write"
+    ],
+    "*.{js,jsx,ts,tsx}": [
+      "eslint"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "changelog": {
+    "labels": {
+      "feat": ":rocket: New Feature",
+      "fix": ":bug: Bug Fix",
+      "doc": ":memo: Documentation",
+      "internal": ":house: Internal",
+      "breaking": ":boom: Breaking Change"
+    }
+  },
+  "devDependencies": {
+    "@one-style/commit": "^0.1.1",
+    "@one-style/eslint": "^0.1.1",
+    "@one-style/prettier": "^0.1.1",
+    "jest": "^26.6.3",
+    "lerna": "^3.22.1",
+    "lerna-changelog": "^1.0.1",
+    "typescript": "^4.1.2"
+  }
+}

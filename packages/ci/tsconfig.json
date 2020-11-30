@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      // "@/*": ["src/*"]
+    },
+    "rootDir": ".",
+    "types": ["node", "jest", "miniprogram-ci"],
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "Node",
+    "resolveJsonModule": true
+  }
+}

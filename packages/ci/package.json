@@ -1,0 +1,36 @@
+{
+  "name": "@one-ci/ci",
+  "version": "0.0.0",
+  "description": "ci for one.",
+  "bin": "bin/index.js",
+  "files": [
+    "bin",
+    "src"
+  ],
+  "scripts": {
+    "test": "test",
+    "dev": "rollup --config=rollup.config.ts --watch",
+    "build": "rollup --config=rollup.config.ts",
+    "release": "npm run publish"
+  },
+  "author": "alexlees",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-alias": "^3.1.1",
+    "@rollup/plugin-eslint": "^8.0.0",
+    "@types/rollup-plugin-json": "^3.0.2",
+    "builtin-modules": "^3.1.0",
+    "rollup": "^2.33.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-license": "^2.2.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-typescript2": "^0.29.0"
+  },
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "execa": "^4.1.0",
+    "miniprogram-ci": "^1.0.94",
+    "ora": "^5.1.0"
+  }
+}
